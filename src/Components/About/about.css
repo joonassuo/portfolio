@@ -1,0 +1,56 @@
+#about-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+  transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#about-back {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+}
+
+/* slide animations */
+.slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
