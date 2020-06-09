@@ -3,15 +3,12 @@ import Frontpage from "./Components/Frontpage/Frontpage";
 import About from "./Components/About/About";
 
 const App: React.FC = () => {
-  const [aboutClass, setAboutClass] = useState<string>("slide-out");
-  const [showAbout, setShowAbout] = useState<boolean>(false);
+  const [aboutClass, setAboutClass] = useState<string>("");
 
   return (
     <div className="App">
-      <Frontpage toggleAbout={setShowAbout} toggleAboutClass={setAboutClass} />
-      {showAbout ? (
-        <About slideClass={aboutClass} toggleClass={setAboutClass} />
-      ) : null}
+      <Frontpage toggleAboutClass={setAboutClass} />
+      <About slideClass={aboutClass} toggleClass={setAboutClass} />
     </div>
   );
 };

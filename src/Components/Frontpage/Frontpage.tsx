@@ -2,11 +2,10 @@ import React from "react";
 import "./frontpage.css";
 
 interface Props {
-  toggleAbout: (toggle: boolean) => void;
   toggleAboutClass: (toggle: string) => void;
 }
 
-const Frontpage: React.FC<Props> = ({ toggleAbout, toggleAboutClass }) => {
+const Frontpage: React.FC<Props> = ({ toggleAboutClass }) => {
   return (
     <div className="frontpage-container">
       <div className="title-container">
@@ -36,7 +35,6 @@ const Frontpage: React.FC<Props> = ({ toggleAbout, toggleAboutClass }) => {
       <div
         id="about"
         onClick={() => {
-          toggleAbout(true);
           toggleAboutClass("slide-in");
         }}
       >
