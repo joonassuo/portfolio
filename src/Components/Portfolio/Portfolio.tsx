@@ -3,13 +3,17 @@ import "./portfolio.css";
 
 interface Props {
   offset: number;
+  opacity: number;
 }
 
-const Portfolio: React.FC<Props> = ({ offset }) => {
+const Portfolio: React.FC<Props> = ({ offset, opacity }) => {
   return (
     <div
       className="portfolio-container"
-      style={{ transform: "translateY(" + offset + "%)" }}
+      style={{
+        transform: "translateY(" + offset + "%)",
+        opacity: opacity,
+      }}
     >
       Portfolio
     </div>

@@ -3,11 +3,12 @@ import "./frontpage.css";
 
 interface Props {
   toggleAboutClass: (toggle: string) => void;
+  opacity: number;
 }
 
-const Frontpage: React.FC<Props> = ({ toggleAboutClass }) => {
+const Frontpage: React.FC<Props> = ({ toggleAboutClass, opacity }) => {
   return (
-    <div className="frontpage-container">
+    <div className="frontpage-container" style={{ opacity: opacity }}>
       <div className="title-container">
         <div id="name">JOONAS SUONPERÄ</div>
         <div id="legend">Full-Stack Developer</div>
