@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "title": "Beeswax",
+      "picture": "/projects/beeswax/collection1.png",
+      "expertise": ["design", "frontend", "backend"]
+    },
+    {
+      "title": "Sanna Silander Personal Website",
+      "picture": "/projects/sannasilander/collection1.png",
+      "expertise": ["design", "frontend", "deployment", "maintanence"]
+    }
+  ]
+}

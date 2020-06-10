@@ -16,14 +16,16 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      {aboutClass === "slide-out" || aboutClass === "" ? (
-        <div className="scroll-mask" onWheel={(e) => getOffset(e.deltaY)}></div>
-      ) : null}
       <Frontpage
         toggleAboutClass={setAboutClass}
         opacity={portfolioOffset / 100}
+        scrollOffset={getOffset}
       />
-      <Portfolio offset={portfolioOffset} opacity={1 - portfolioOffset / 100} />
+      <Portfolio
+        offset={portfolioOffset}
+        opacity={1 - portfolioOffset / 100}
+        scrollOffset={getOffset}
+      />
       <About slideClass={aboutClass} toggleClass={setAboutClass} />
     </div>
   );
