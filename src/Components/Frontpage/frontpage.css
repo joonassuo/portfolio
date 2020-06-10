@@ -30,6 +30,7 @@
   position: absolute;
   top: 50%;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 #about {
