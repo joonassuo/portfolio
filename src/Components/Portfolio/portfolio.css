@@ -1,10 +1,6 @@
 .portfolio-container {
-  position: fixed;
-  top: 0;
-  width: 100vw;
   background-color: beige;
   z-index: 50;
-  will-change: transform;
 }
 
 .projects-container {

@@ -3,21 +3,11 @@ import "./frontpage.css";
 
 interface Props {
   toggleAboutClass: (toggle: string) => void;
-  scrollOffset: (direction: number) => void;
-  opacity: number;
 }
 
-const Frontpage: React.FC<Props> = ({
-  toggleAboutClass,
-  scrollOffset,
-  opacity,
-}) => {
+const Frontpage: React.FC<Props> = ({ toggleAboutClass }) => {
   return (
-    <div
-      className="frontpage-container"
-      style={{ opacity: opacity }}
-      onWheel={(e) => scrollOffset(e.deltaY)}
-    >
+    <div className="frontpage-container">
       <div className="title-container">
         <div id="name">JOONAS SUONPERÄ</div>
         <div id="legend">Full-Stack Developer</div>
