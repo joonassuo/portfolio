@@ -2,7 +2,15 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 100vh;
   background-color: beige;
   z-index: 50;
+  will-change: transform;
+}
+
+.projects-container {
+  width: 70vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10%;
 }

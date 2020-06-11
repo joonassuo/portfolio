@@ -19,16 +19,20 @@ const Portfolio: React.FC<Props> = ({ offset, opacity, scrollOffset }) => {
         opacity: opacity,
       }}
     >
-      <div className="projects-container"></div>
-      {projects.projects.map((project) => {
-        return (
-          <PortfolioItem
-            title={project.title}
-            expertise={project.expertise}
-            picture={project.picture}
-          />
-        );
-      })}
+      <div id="portfolio-title">Selected Work</div>
+      <div className="projects-container">
+        {projects.projects.map((project, index) => {
+          return (
+            <PortfolioItem
+              index={index}
+              title={project.title}
+              legend={project.legend}
+              expertise={project.expertise}
+              picture={project.picture}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

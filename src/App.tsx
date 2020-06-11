@@ -11,7 +11,7 @@ const App: React.FC = () => {
   // Scroll portfolio on wheel event
   const getOffset = (direction: number): void => {
     let increment = direction < 0 ? 1 : -1;
-    setPortfolioOffset(portfolioOffset + 4 * increment);
+    setPortfolioOffset(portfolioOffset + 5 * increment);
   };
 
   return (
