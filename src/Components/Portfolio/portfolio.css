@@ -1,6 +1,8 @@
 .portfolio-container {
   background-color: beige;
   z-index: 50;
+  position: relative;
+  top: 100vh;
 }
 
 .projects-container {
