@@ -3,11 +3,18 @@ import "./frontpage.css";
 
 interface Props {
   toggleAboutClass: (toggle: string) => void;
+  portfolioIndex: number | null;
 }
 
-const Frontpage: React.FC<Props> = ({ toggleAboutClass }) => {
+const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
   return (
-    <div className="frontpage-container">
+    <div
+      className={
+        portfolioIndex === null
+          ? "test frontpage-container"
+          : "frontpage-container"
+      }
+    >
       <div className="title-container">
         <div id="name">JOONAS SUONPERÄ</div>
         <div id="legend">Full-Stack Developer</div>

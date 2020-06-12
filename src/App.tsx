@@ -7,13 +7,16 @@ import PortfolioItem from "./Components/Portfolio/PortfolioItem/PortfolioItem";
 
 const App: React.FC = () => {
   const [aboutClass, setAboutClass] = useState<string>("");
-  const [portfolioIndex, setPortfolioIndex] = useState<number>(-1);
+  const [portfolioIndex, setPortfolioIndex] = useState<number | null>(null);
 
   useEffect(() => {});
 
   // On wheel event, change potfolio page
   const onWheel = (direction: number) => {
-    setPortfolioIndex(portfolioIndex + direction / 100);
+    let indx = portfolioIndex === null ? 0 : portfolioIndex + direction / 100;
+    console.log(indx);
+
+    setPortfolioIndex(indx);
   };
 
   return (
@@ -28,11 +31,15 @@ const App: React.FC = () => {
         style={{
           position: "fixed",
           top: 0,
+          zIndex: 20000,
         }}
       >
         {portfolioIndex}
       </h2>
-      <Frontpage toggleAboutClass={setAboutClass} />
+      <Frontpage
+        toggleAboutClass={setAboutClass}
+        portfolioIndex={portfolioIndex}
+      />
       {projects.projects.map((project, index) => {
         return (
           <PortfolioItem
