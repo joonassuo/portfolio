@@ -37,7 +37,7 @@ const App: React.FC = () => {
         return (
           <PortfolioItem
             index={index}
-            slideClass={portfolioIndex === index ? "slide-in" : ""}
+            slideClass={portfolioIndex === index ? "slide-up" : "slide-down"}
             expertise={project.expertise}
             legend={project.legend}
             picture={project.picture}
