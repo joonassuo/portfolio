@@ -8,15 +8,27 @@ import PortfolioItem from "./Components/Portfolio/PortfolioItem/PortfolioItem";
 const App: React.FC = () => {
   const [aboutClass, setAboutClass] = useState<string>("");
   const [portfolioIndex, setPortfolioIndex] = useState<number | null>(null);
+  const [disableWheel, setDisableWheel] = useState<boolean>(false);
 
   useEffect(() => {});
 
   // On wheel event, change potfolio page
   const onWheel = (direction: number) => {
-    let indx = portfolioIndex === null ? 0 : portfolioIndex + direction / 100;
-    console.log(indx);
-
+    if (disableWheel) {
+      return;
+    }
+    let indx =
+      portfolioIndex === null
+        ? 0
+        : direction > 0
+        ? portfolioIndex + 1
+        : portfolioIndex - 1;
     setPortfolioIndex(indx);
+    // disable wheel for some time
+    setDisableWheel(true);
+    setTimeout(() => {
+      setDisableWheel(false);
+    }, 2000);
   };
 
   return (
