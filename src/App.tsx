@@ -8,6 +8,7 @@ import PortfolioItem from "./Components/Portfolio/PortfolioItem/PortfolioItem";
 const App: React.FC = () => {
   const [aboutClass, setAboutClass] = useState<string>("");
   const [portfolioIndex, setPortfolioIndex] = useState<number | null>(null);
+  const [scrollDirection, setScrollDirection] = useState<number | null>(null);
   const [disableWheel, setDisableWheel] = useState<boolean>(false);
 
   useEffect(() => {});
@@ -17,18 +18,16 @@ const App: React.FC = () => {
     if (disableWheel) {
       return;
     }
-    let indx =
-      portfolioIndex === null
-        ? 0
-        : direction > 0
-        ? portfolioIndex + 1
-        : portfolioIndex - 1;
+    let n = direction > 0 ? 1 : -1;
+    console.log(n);
+    let indx = portfolioIndex === null ? 0 : portfolioIndex + n;
+    setScrollDirection(n);
     setPortfolioIndex(indx);
-    // disable wheel for some time
+    // disable wheel for some time after scroll
     setDisableWheel(true);
     setTimeout(() => {
       setDisableWheel(false);
-    }, 2000);
+    }, 1000);
   };
 
   return (
@@ -53,10 +52,27 @@ const App: React.FC = () => {
         portfolioIndex={portfolioIndex}
       />
       {projects.projects.map((project, index) => {
+        let scrollClass;
+        if (portfolioIndex === null) {
+          scrollClass = "portfolio-item-on-bottom";
+        } else if (portfolioIndex === index) {
+          scrollClass =
+            scrollDirection === 1 ? "slide-from-bottom" : "slide-from-top";
+        } else if (portfolioIndex - index === 1 && scrollDirection === 1) {
+          scrollClass = "slide-to-top";
+        } else if (portfolioIndex - index === -1 && scrollDirection === -1) {
+          scrollClass = "slide-to-bottom";
+        } else {
+          scrollClass =
+            portfolioIndex > index
+              ? "portfolio-item-on-top"
+              : "portfolio-item-on-bottom";
+        }
+
         return (
           <PortfolioItem
             index={index}
-            slideClass={portfolioIndex === index ? "slide-up" : "slide-down"}
+            slideClass={scrollClass}
             expertise={project.expertise}
             legend={project.legend}
             picture={project.picture}
