@@ -6,7 +6,8 @@
       "picture": "/projects/beeswax/collection1.png",
       "expertise": ["design", "frontend", "backend"],
       "description": "Skill-sharing app created mainly for Hive Helsinki students - to facilitate networking within the school in a fun and natural way. The service utilizes the 42 API for authentification.",
-      "stack": ["React", "Redux", "NodeJs"]
+      "stack": ["React", "Redux", "NodeJs"],
+      "client": "Personal Project"
     },
     {
       "title": "sannasilander",
@@ -14,7 +15,17 @@
       "picture": "/projects/sannasilander/collection1.png",
       "expertise": ["design", "frontend"],
       "description": "Personal portfolio for stylist Sanna Silander. The client wanted a simplistic website with a clear focus on the work.",
-      "stack": ["React"]
+      "stack": ["React"],
+      "client": "Sanna Silander"
+    },
+    {
+      "title": "Lifetracker",
+      "legend": "Habit Tracker Web App",
+      "picture": "/projects/lifetracker/collection1.png",
+      "expertise": ["design", "frontend", "backend"],
+      "description": "Personal portfolio for stylist Sanna Silander. The client wanted a simplistic website with a clear focus on the work.",
+      "stack": ["React, NodeJs"],
+      "client": "Personal Project"
     }
   ]
 }

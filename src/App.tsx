@@ -70,8 +70,11 @@ const App: React.FC = () => {
             slideClass={scrollClass}
             expertise={project.expertise}
             legend={project.legend}
+            stack={project.stack}
+            description={project.description}
             picture={project.picture}
             title={project.title}
+            client={project.client}
           />
         );
       })}

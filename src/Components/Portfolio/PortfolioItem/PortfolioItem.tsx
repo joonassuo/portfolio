@@ -8,8 +8,11 @@ interface Props {
   legend: string;
   picture: string;
   expertise: Array<string>;
+  stack: Array<string>;
+  description: string;
   website?: string;
   code?: string;
+  client: string;
 }
 
 const PortfolioItem: React.FC<Props> = ({
@@ -19,8 +22,11 @@ const PortfolioItem: React.FC<Props> = ({
   legend,
   picture,
   expertise,
+  stack,
+  description,
   website,
   code,
+  client,
 }) => {
   const [slideDetails, setSlideDetails] = useState<string>("");
 
@@ -43,13 +49,42 @@ const PortfolioItem: React.FC<Props> = ({
           <img src="/icons/arrow.png" alt="arrow" />
         </div>
       </div>
-      <img src={picture} alt="screenshot" id="item-image" />
+      <div className="portfolio-item-picture-container">
+        <img src={picture} alt="screenshot" id="item-image" />
+      </div>
       <div className={slideDetails + " portfolio-item-details"}>
         <div
           className="mask-toggle-info-button"
           onClick={() => setSlideDetails("slide-to-right")}
         >
           <img src="/icons/arrow.png" alt="arrow" id="toggle-back" />
+        </div>
+        <div className="details-picture-container">
+          <img src={picture} alt="screenshot" id="details-image" />
+        </div>
+        <div className="details-container">
+          <div className="details-content">
+            <div className="details-left">
+              <div className="details-title">CLIENT</div>
+              <div className="details-body">{client}</div>
+              <div className="details-title">PROJECT</div>
+              <div className="details-body">
+                {expertise.map((e, i) => {
+                  return i > 0 ? " / " + e.toLowerCase() : "" + e.toLowerCase();
+                })}
+              </div>
+              <div className="details-title">STACK</div>
+              <div>
+                {stack.map((s, i) => {
+                  return i > 0 ? " / " + s.toLowerCase() : "" + s.toLowerCase();
+                })}
+              </div>
+            </div>
+            <div className="details-right">
+              <div className="details-title">DESCRIPTION</div>
+              <div className="details-body">{description}</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
