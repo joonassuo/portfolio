@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Frontpage from "./Components/Frontpage/Frontpage";
 import About from "./Components/About/About";
+import IndexSidebar from "./Components/IndexSidebar/IndexSidebar";
 import projects from "./Components/Portfolio/projects.json";
 import "./app.css";
 import PortfolioItem from "./Components/Portfolio/PortfolioItem/PortfolioItem";
@@ -38,15 +39,9 @@ const App: React.FC = () => {
         onWheel(e.deltaY);
       }}
     >
-      <h2
-        style={{
-          position: "fixed",
-          top: 0,
-          zIndex: 20000,
-        }}
-      >
-        {portfolioIndex}
-      </h2>
+      {portfolioIndex === null || portfolioIndex < 0 ? null : (
+        <IndexSidebar portfolioIndex={portfolioIndex} />
+      )}
       <Frontpage
         toggleAboutClass={setAboutClass}
         portfolioIndex={portfolioIndex}
