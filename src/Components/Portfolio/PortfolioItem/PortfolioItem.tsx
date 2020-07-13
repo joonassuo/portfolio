@@ -24,6 +24,20 @@ const PortfolioItem: React.FC<Props> = ({
 }) => {
   return (
     <div className={slideClass + " portfolio-item-container"}>
+      <div className="portfolio-item-mask">
+        <div className="mask-expertise">
+          {expertise.map((e, i) => {
+            return i > 0 ? " / " + e.toUpperCase() : "" + e.toUpperCase();
+          })}
+        </div>
+        <div className="title-legend-container">
+          <div className="mask-title">{title.toUpperCase()}</div>
+          <div className="mask-legend">{legend.toUpperCase()}</div>
+        </div>
+        <div className="mask-more-info-button">
+          <img src="/icons/arrow.png" alt="arrow" />
+        </div>
+      </div>
       <img src={picture} alt="screenshot" id="item-image" />
     </div>
   );
