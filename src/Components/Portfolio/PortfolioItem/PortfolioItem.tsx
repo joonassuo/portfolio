@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./portfolioItem.css";
 
 interface Props {
@@ -22,6 +22,8 @@ const PortfolioItem: React.FC<Props> = ({
   website,
   code,
 }) => {
+  const [slideDetails, setSlideDetails] = useState<string>("");
+
   return (
     <div className={slideClass + " portfolio-item-container"}>
       <div className="portfolio-item-mask">
@@ -34,11 +36,22 @@ const PortfolioItem: React.FC<Props> = ({
           <div className="mask-title">{title.toUpperCase()}</div>
           <div className="mask-legend">{legend.toUpperCase()}</div>
         </div>
-        <div className="mask-more-info-button">
+        <div
+          className="mask-toggle-info-button"
+          onClick={() => setSlideDetails("slide-from-right")}
+        >
           <img src="/icons/arrow.png" alt="arrow" />
         </div>
       </div>
       <img src={picture} alt="screenshot" id="item-image" />
+      <div className={slideDetails + " portfolio-item-details"}>
+        <div
+          className="mask-toggle-info-button"
+          onClick={() => setSlideDetails("slide-to-right")}
+        >
+          <img src="/icons/arrow.png" alt="arrow" id="toggle-back" />
+        </div>
+      </div>
     </div>
   );
 };
