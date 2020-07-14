@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 .frontpage-container {
   position: fixed;
@@ -11,6 +11,8 @@
 }
 
 #frontpage-logo {
+  width: 55%;
+  height: auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);

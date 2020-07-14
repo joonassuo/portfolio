@@ -2,10 +2,8 @@
   position: absolute;
   background-color: white;
   top: 0;
-  left: 10vw;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
-  transform: translateX(-90vw);
 }
 
 .portfolio-item-on-bottom {
@@ -20,18 +18,18 @@
 .portfolio-item-picture-container {
   top: 0;
   position: absolute;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   z-index: 1;
   text-align: center;
 }
 
 #item-image {
-  width: 100%;
-  height: auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  width: 90%;
+  height: auto;
 }
 
 .portfolio-item-mask {
@@ -44,13 +42,19 @@
   z-index: 2;
 }
 
+.portfolio-item-index {
+  margin: 1.5% 0 1% 2.5%;
+  font-size: 3rem;
+  font-family: serif;
+}
+
 .mask-expertise {
   position: relative;
-  margin-top: 5%;
   border-top: 1px solid rgb(255, 255, 255);
   width: 95%;
   left: 50%;
   transform: translateX(-50%);
+  padding-top: 1rem;
 }
 
 .title-legend-container {
@@ -61,6 +65,9 @@
 
 .mask-title {
   font-size: 8rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2rem;
+  font-weight: 50;
 }
 
 .mask-legend {
@@ -92,9 +99,9 @@
   left: 0;
   background-color: white;
   z-index: 20000;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
-  transform: translateX(90vw);
+  transform: translateX(100vw);
 }
 
 #toggle-back {
@@ -122,6 +129,7 @@
 .details-title {
   color: rgb(151, 151, 151);
   margin-bottom: 4px;
+  font-family: "Playfair Display", serif;
 }
 
 .details-body {
@@ -275,7 +283,7 @@
 
 @keyframes slide-from-right {
   0% {
-    transform: translateX(90vw);
+    transform: translateX(100vw);
   }
   100% {
     transform: translateX(0);
@@ -284,7 +292,7 @@
 
 @-webkit-keyframes slide-from-right {
   0% {
-    transform: translateX(90vw);
+    transform: translateX(100vw);
   }
   100% {
     transform: translateX(0);
@@ -296,7 +304,7 @@
     transform: translateX(0vw);
   }
   100% {
-    transform: translateX(90vw);
+    transform: translateX(100vw);
   }
 }
 
@@ -305,6 +313,6 @@
     transform: translateX(0vw);
   }
   100% {
-    transform: translateX(90vw);
+    transform: translateX(100vw);
   }
 }

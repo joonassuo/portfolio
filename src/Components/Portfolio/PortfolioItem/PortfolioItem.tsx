@@ -33,6 +33,9 @@ const PortfolioItem: React.FC<Props> = ({
   return (
     <div className={slideClass + " portfolio-item-container"}>
       <div className="portfolio-item-mask">
+        <div className="portfolio-item-index">
+          {index < 10 ? ".0" + (index + 1) : "." + (index + 1)}
+        </div>
         <div className="mask-expertise">
           {expertise.map((e, i) => {
             return i > 0 ? " / " + e.toUpperCase() : "" + e.toUpperCase();
