@@ -10,26 +10,10 @@
   background-color: white;
 }
 
-.test {
-  z-index: 10000;
-}
-
-.title-container {
-  position: absolute;
+#frontpage-logo {
+  position: relative;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#name {
-  font-family: "Bungee Shade", cursive;
-  margin-bottom: 3vh;
-  font-size: 8vh;
-  line-height: 1;
-}
-
-#legend {
-  font-size: 2rem;
+  transform: translateY(-50%);
 }
 
 #about,
@@ -52,11 +36,13 @@
 }
 
 .links-container {
-  margin-top: 3rem;
+  position: absolute;
+  bottom: 10%;
+  display: none;
 }
 
 .social-link {
-  width: 5rem;
+  width: 3rem;
   margin: 0 2rem 0 2rem;
 }
 
