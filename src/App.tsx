@@ -59,7 +59,6 @@ const App: React.FC = () => {
               ? "portfolio-item-on-top"
               : "portfolio-item-on-bottom";
         }
-
         return (
           <PortfolioItem
             index={index}
@@ -71,6 +70,7 @@ const App: React.FC = () => {
             picture={project.picture}
             title={project.title}
             client={project.client}
+            style={project.style}
           />
         );
       })}

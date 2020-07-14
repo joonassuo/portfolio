@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./portfolioItem.css";
 
 interface Props {
@@ -12,6 +12,7 @@ interface Props {
   description: string;
   website?: string;
   code?: string;
+  style?: string;
   client: string;
 }
 
@@ -26,9 +27,19 @@ const PortfolioItem: React.FC<Props> = ({
   description,
   website,
   code,
+  style,
   client,
 }) => {
   const [slideDetails, setSlideDetails] = useState<string>("");
+
+  // Set styles according to each project
+  useEffect(() => {
+    if (style) {
+      document
+        .getElementById("item-image-" + index)
+        ?.setAttribute("style", style);
+    }
+  });
 
   return (
     <div className={slideClass + " portfolio-item-container"}>
@@ -53,7 +64,12 @@ const PortfolioItem: React.FC<Props> = ({
         </div>
       </div>
       <div className="portfolio-item-picture-container">
-        <img src={picture} alt="screenshot" id="item-image" />
+        <img
+          src={picture}
+          alt="screenshot"
+          className="item-image"
+          id={"item-image-" + index}
+        />
       </div>
       <div className={slideDetails + " portfolio-item-details"}>
         <div

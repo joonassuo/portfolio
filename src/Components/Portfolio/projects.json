@@ -10,13 +10,13 @@
       "client": "Sanna Silander"
     },
     {
-      "title": "Beeswax",
-      "legend": "Skill Sharing Web App",
-      "picture": "/projects/beeswax/collection1.png",
-      "expertise": ["design", "frontend", "backend"],
-      "description": "Skill-sharing app created mainly for Hive Helsinki students - to facilitate networking within the school in a fun and natural way. The service utilizes the 42 API for authentification.",
-      "stack": ["React", "Redux", "NodeJs"],
-      "client": "Personal Project"
+      "title": "islajournal",
+      "legend": "Issue Two of Fashion Zine",
+      "picture": "/projects/islajournal/islajournal.png",
+      "expertise": ["frontend"],
+      "description": "Second issue of Fashion Zine ISLA Journal. The client provided the designs, so the emphasis during the work was to realize the artists' vision to the t and bring it to life on a computer screen and on mobile.",
+      "stack": ["React"],
+      "client": "Aya Brace"
     },
     {
       "title": "Lifetracker",
@@ -25,6 +25,16 @@
       "expertise": ["design", "frontend", "backend"],
       "description": "Personal portfolio for stylist Sanna Silander. The client wanted a simplistic website with a clear focus on the work.",
       "stack": ["React, NodeJs"],
+      "client": "Personal Project",
+      "style": "position: absolute;bottom: 0;left: 50%;transform: translateX(-50%);width: 60%;height: auto;top: unset;"
+    },
+    {
+      "title": "Beeswax",
+      "legend": "Skill Sharing Web App",
+      "picture": "/projects/beeswax/collection1.png",
+      "expertise": ["design", "frontend", "backend"],
+      "description": "Skill-sharing app created mainly for Hive Helsinki students - to facilitate networking within the school in a fun and natural way. The service utilizes the 42 API for authentification.",
+      "stack": ["React", "Redux", "NodeJs"],
       "client": "Personal Project"
     }
   ]
