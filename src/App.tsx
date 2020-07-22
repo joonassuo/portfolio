@@ -3,6 +3,7 @@ import Frontpage from "./Components/Frontpage/Frontpage";
 import About from "./Components/About/About";
 import projects from "./Components/Portfolio/projects.json";
 import "./app.css";
+import "./animations.css";
 import PortfolioItem from "./Components/Portfolio/PortfolioItem/PortfolioItem";
 
 const App: React.FC = () => {

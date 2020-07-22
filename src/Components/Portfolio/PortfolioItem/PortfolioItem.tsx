@@ -53,11 +53,15 @@ const PortfolioItem: React.FC<Props> = ({
           })}
         </div>
         <div className="title-legend-container">
-          <div className="mask-title">{title.toUpperCase()}</div>
-          <div className="mask-legend">{legend.toUpperCase()}</div>
+          <div className="mask-title animate-appear" id="title">
+            {title.toUpperCase()}
+          </div>
+          <div className="mask-legend animate-appear">
+            {legend.toUpperCase()}
+          </div>
         </div>
         <div
-          className="mask-toggle-info-button"
+          className="mask-toggle-info-button animate-appear"
           onClick={() => setSlideDetails("slide-from-right")}
         >
           <img src="/icons/arrow.png" alt="arrow" />
