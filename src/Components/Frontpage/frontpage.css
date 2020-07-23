@@ -61,7 +61,8 @@
     height: auto;
   }
 
-  #about {
+  #about,
+  #scroll-arrow {
     display: none;
   }
 }

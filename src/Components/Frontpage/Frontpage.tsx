@@ -12,13 +12,7 @@ const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
   });
 
   return (
-    <div
-      className={
-        portfolioIndex === null
-          ? "test frontpage-container"
-          : "frontpage-container"
-      }
-    >
+    <div className="frontpage-container">
       <img id="frontpage-logo" src="/frontpage_logo.png" alt="logo" />
       <div className="links-container">
         <img

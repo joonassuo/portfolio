@@ -48,7 +48,7 @@ const PortfolioItem: React.FC<Props> = ({
           {index < 10 ? ".0" + (index + 1) : "." + (index + 1)}
         </div>
         <div className="line-appear" id="line"></div>
-        <div className="mask-expertise">
+        <div className="mask-expertise animate-appear">
           {expertise.map((e, i) => {
             return i > 0 ? " / " + e.toUpperCase() : "" + e.toUpperCase();
           })}
