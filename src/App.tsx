@@ -21,7 +21,7 @@ const App: React.FC = () => {
 
   // On wheel event, change potfolio page
   const onWheel = (direction: number) => {
-    if (disableWheel) {
+    if (disableWheel || (direction > 0 && portfolioIndex === 3)) {
       return;
     }
     let n = direction > 0 ? 1 : -1;
