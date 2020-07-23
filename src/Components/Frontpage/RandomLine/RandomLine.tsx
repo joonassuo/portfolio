@@ -4,21 +4,21 @@ import "./randomLine.css";
 interface Props {
   position: number;
   speed: number;
-  maxWidth: number;
+  maxHeight: number;
 }
 
-const RandomLine: React.FC<Props> = ({ position, speed, maxWidth }) => {
-  const [width, setWidth] = useState<number>(0);
+const RandomLine: React.FC<Props> = ({ position, speed, maxHeight }) => {
+  const [height, setHeight] = useState<number>(0);
   useEffect(() => {
     setTimeout(() => {
-      if (width < maxWidth) setWidth(width + 1);
+      if (height < maxHeight) setHeight(height + 1);
     }, speed);
   });
 
   // Set style on each render
   const style: object = {
-    width: width + "px",
-    top: position + "%",
+    height: height + "px",
+    left: position + "%",
   };
   return <div className="random-line" style={style}></div>;
 };

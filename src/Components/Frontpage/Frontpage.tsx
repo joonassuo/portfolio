@@ -8,7 +8,7 @@ interface Props {
 }
 
 interface Line {
-  maxWidth: number;
+  maxHeight: number;
   position: number;
   speed: number;
 }
@@ -23,11 +23,11 @@ const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
   useEffect(() => {
     window.scrollTo(0, 1);
     var lineArray: Array<Line> = [];
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 10; i++) {
       var line = {
-        maxWidth: getRandomNumber(30, 500),
+        maxHeight: getRandomNumber(30, 800),
         position: getRandomNumber(0, 100),
-        speed: getRandomNumber(100, 500),
+        speed: getRandomNumber(50, 100),
       };
       lineArray.push(line);
     }
@@ -40,7 +40,7 @@ const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
       {lines.map((line) => {
         return (
           <RandomLine
-            maxWidth={line.maxWidth}
+            maxHeight={line.maxHeight}
             position={line.position}
             speed={line.speed}
           />
