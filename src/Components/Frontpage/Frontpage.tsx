@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import RandomLine from "./RandomLine/RandomLine";
 import "./frontpage.css";
 
 interface Props {
@@ -6,13 +7,45 @@ interface Props {
   portfolioIndex: number | null;
 }
 
+interface Line {
+  maxWidth: number;
+  position: number;
+  speed: number;
+}
+
+const getRandomNumber: Function = (min: number, max: number): number => {
+  return min + Math.random() * (max - min);
+};
+
 const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
+  const [lines, setLines] = useState<Array<Line>>([]);
+
   useEffect(() => {
     window.scrollTo(0, 1);
-  });
+    var lineArray: Array<Line> = [];
+    for (let i = 0; i < 15; i++) {
+      var line = {
+        maxWidth: getRandomNumber(30, 500),
+        position: getRandomNumber(0, 100),
+        speed: getRandomNumber(100, 500),
+      };
+      lineArray.push(line);
+    }
+    setLines(lineArray);
+    console.log(lineArray);
+  }, []);
 
   return (
     <div className="frontpage-container">
+      {lines.map((line) => {
+        return (
+          <RandomLine
+            maxWidth={line.maxWidth}
+            position={line.position}
+            speed={line.speed}
+          />
+        );
+      })}
       <img id="frontpage-logo" src="/frontpage_logo.png" alt="logo" />
       <div className="links-container">
         <img
