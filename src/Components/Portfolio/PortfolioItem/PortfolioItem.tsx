@@ -47,13 +47,14 @@ const PortfolioItem: React.FC<Props> = ({
         <div className="portfolio-item-index">
           {index < 10 ? ".0" + (index + 1) : "." + (index + 1)}
         </div>
+        <div className="line-appear" id="line"></div>
         <div className="mask-expertise">
           {expertise.map((e, i) => {
             return i > 0 ? " / " + e.toUpperCase() : "" + e.toUpperCase();
           })}
         </div>
         <div className="title-legend-container">
-          <div className="mask-title animate-appear" id="title">
+          <div className="mask-title animate-spacing" id="title">
             {title.toUpperCase()}
           </div>
           <div className="mask-legend animate-appear">

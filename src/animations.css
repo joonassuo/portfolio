@@ -156,8 +156,8 @@
 }
 
 /* LINE APPEAR ANIMATIONS */
-.slide-from-bottom div.mask-expertise,
-.slide-from-top div.mask-expertise {
+.slide-from-bottom div.line-appear,
+.slide-from-top div.line-appear {
   animation: line-appear forwards 1s;
   animation-delay: 0.2s;
   --webkit-animation-delay: 0.2s;
@@ -176,8 +176,8 @@
   }
 }
 
-.slide-to-bottom div.mask-expertise,
-.slide-to-top div.mask-expertise {
+.slide-to-bottom div.line-appear,
+.slide-to-top div.line-appear {
   animation: line-disappear forwards 1s;
   --webkit-animation: line-appear forwards 1s;
 }
@@ -195,9 +195,9 @@
 .slide-from-bottom div.animate-appear,
 .slide-from-top div.animate-appear {
   animation: animate-appear forwards 0.5s;
-  animation-delay: 1.2s;
-  --webkit-animation-delay: 1.2s;
+  animation-delay: 1s;
   --webkit-animation: animate-appear forwards 1s;
+  --webkit-animation-delay: 1s;
 }
 
 @keyframes animate-appear {
@@ -215,7 +215,7 @@
 .slide-to-bottom div.animate-appear,
 .slide-to-top div.animate-appear {
   animation: animate-disappear forwards 0.3s;
-  --webkit-animation: animate-appear forwards 1s;
+  --webkit-animation: animate-disappear forwards 0.3s;
 }
 
 @keyframes animate-disappear {
@@ -235,3 +235,56 @@
     opacity: 0;
   }
 }
+
+/* LETTER SPACING ANIMATIONS */
+.slide-from-bottom div.animate-spacing,
+.slide-from-top div.animate-spacing {
+  animation: animate-spacing-expand forwards 0.5s;
+  animation-delay: 1s;
+  --webkit-animation-delay: 1s;
+  --webkit-animation: animate-spacing-expand forwards 0.5s;
+}
+
+@keyframes animate-spacing-expand {
+  100% {
+    letter-spacing: 2vw;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animate-spacing-expand {
+  100% {
+    letter-spacing: 2vw;
+    opacity: 1;
+  }
+}
+
+.slide-to-bottom div.animate-spacing,
+.slide-to-top div.animate-spacing {
+  animation: animate-spacing-shrink forwards 0.5s;
+  --webkit-animation: animate-spacing-shrink forwards 0.5s;
+}
+
+@keyframes animate-spacing-shrink {
+  0% {
+    opacity: 1;
+    letter-spacing: 2vw;
+  }
+  100% {
+    opacity: 0;
+    letter-spacing: 0;
+  }
+}
+
+@-webkit-keyframes animate-spacing-shrink {
+  0% {
+    opacity: 1;
+    letter-spacing: 2vw;
+  }
+  100% {
+    opacity: 0;
+    letter-spacing: 0;
+  }
+}
+
+/* BUTTON TRANSFORM ANIMATIONS */
