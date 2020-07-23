@@ -54,3 +54,14 @@
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
 }
+
+@media (max-width: 600px) {
+  #frontpage-logo {
+    width: 90%;
+    height: auto;
+  }
+
+  #about {
+    display: none;
+  }
+}

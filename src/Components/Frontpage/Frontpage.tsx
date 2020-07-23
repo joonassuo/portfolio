@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./frontpage.css";
 
 interface Props {
@@ -7,6 +7,10 @@ interface Props {
 }
 
 const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
+  useEffect(() => {
+    window.scrollTo(0, 1);
+  });
+
   return (
     <div
       className={
@@ -44,7 +48,6 @@ const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
       >
         About
       </div>
-      <div id="contact">Contact</div>
       <img src="/icons/arrow.png" alt="arrow" id="scroll-arrow" />
     </div>
   );

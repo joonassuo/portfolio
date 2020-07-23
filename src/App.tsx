@@ -50,7 +50,7 @@ const App: React.FC = () => {
         let touchEnd = e.changedTouches[0].clientY;
         let delta = mobileTouchStart.current - touchEnd;
         let direction = delta > 0 ? 1 : -1;
-        if (Math.abs(delta) > 10) onWheel(direction);
+        if (Math.abs(delta) > 60) onWheel(direction);
       }}
     >
       <Frontpage
