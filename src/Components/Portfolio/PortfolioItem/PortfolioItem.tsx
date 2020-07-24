@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./portfolioItem.css";
 
 interface Props {
@@ -36,7 +36,7 @@ const PortfolioItem: React.FC<Props> = ({
   useEffect(() => {
     if (style) {
       document
-        .getElementById("item-image-" + index)
+        .getElementById("item-image-" + title.toLowerCase())
         ?.setAttribute("style", style);
     }
   });
@@ -73,7 +73,7 @@ const PortfolioItem: React.FC<Props> = ({
           src={picture}
           alt="screenshot"
           className="item-image"
-          id={"item-image-" + index}
+          id={"item-image-" + title.toLowerCase()}
         />
       </div>
       <div className={slideDetails + " portfolio-item-details"}>
@@ -84,7 +84,12 @@ const PortfolioItem: React.FC<Props> = ({
           <img src="/icons/arrow.png" alt="arrow" id="toggle-back" />
         </div>
         <div className="details-picture-container">
-          <img src={picture} alt="screenshot" id="details-image" />
+          <img
+            src={picture}
+            alt="screenshot"
+            className="details-image"
+            id={"details-image-" + title.toLowerCase()}
+          />
         </div>
         <div className="details-container">
           <div className="details-content">
@@ -98,13 +103,37 @@ const PortfolioItem: React.FC<Props> = ({
                 })}
               </div>
               <div className="details-title">STACK</div>
-              <div>
+              <div className="details-body">
                 {stack.map((s, i) => {
                   return i > 0 ? " / " + s.toLowerCase() : "" + s.toLowerCase();
                 })}
               </div>
             </div>
             <div className="details-right">
+              <div className="details-title">DESCRIPTION</div>
+              <div className="details-body">{description}</div>
+            </div>
+          </div>
+          <div className="mobile-details-content">
+            <div className="details-left">
+              <div className="details-title">CLIENT</div>
+              <div className="details-title">PROJECT</div>
+              <div className="details-title">STACK</div>
+            </div>
+            <div className="details-right">
+              <div className="details-body">{client}</div>
+              <div className="details-body">
+                {expertise.map((e, i) => {
+                  return i > 0 ? " / " + e.toLowerCase() : "" + e.toLowerCase();
+                })}
+              </div>
+              <div className="details-body">
+                {stack.map((s, i) => {
+                  return i > 0 ? " / " + s.toLowerCase() : "" + s.toLowerCase();
+                })}
+              </div>
+            </div>
+            <div className="mobile-details-description">
               <div className="details-title">DESCRIPTION</div>
               <div className="details-body">{description}</div>
             </div>

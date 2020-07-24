@@ -130,9 +130,10 @@
 
 .details-picture-container {
   background-color: rgb(211, 211, 211);
+  position: relative;
 }
 
-#details-image {
+.details-image {
   max-height: 90%;
   max-width: 90%;
   position: relative;
@@ -161,6 +162,10 @@
   border-left: 1px solid orange;
 }
 
+.mobile-details-content {
+  display: none;
+}
+
 .details-left,
 .details-right {
   display: inline-block;
@@ -181,6 +186,20 @@
     margin-top: 5%;
   }
 
+  .item-image {
+    max-width: 95%;
+    max-height: 95%;
+  }
+
+  .details-content {
+    display: none;
+  }
+
+  .mobile-details-content {
+    display: block;
+    padding: 10% 0 5% 10%;
+  }
+
   .details-picture-container {
     height: 40%;
   }
@@ -189,30 +208,36 @@
     height: 60%;
   }
 
-  .details-content {
-    padding: none;
-    width: 90%;
-    position: relative;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
-    border: none;
-  }
-
-  .details-title {
-    font-size: 3.5vw;
-  }
-
+  .details-title,
   .details-body {
     font-size: 3.5vw;
+    margin-bottom: 8px;
+  }
+
+  .details-left,
+  .details-right {
+    width: auto;
   }
 
   .details-left {
-    width: 35%;
-    margin-right: 5%;
+    margin-right: 15%;
   }
 
-  .details-right {
-    width: 55%;
+  .mobile-details-description {
+    margin-top: 5%;
+    width: 90%;
+  }
+
+  /* LIFETRACKER ON MOBILE */
+  #item-image-lifetracker {
+    width: 140% !important;
+    max-width: 140%;
+  }
+
+  #details-image-lifetracker {
+    position: absolute;
+    bottom: 0;
+    top: unset;
+    transform: translateX(-50%);
   }
 }
