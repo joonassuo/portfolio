@@ -50,7 +50,7 @@ const PortfolioItem: React.FC<Props> = ({
         <div className="line-appear" id="line"></div>
         <div className="mask-expertise animate-appear">
           {expertise.map((e, i) => {
-            return i > 0 ? " / " + e.toUpperCase() : "" + e.toUpperCase();
+            return i > 0 ? " / " + e : "" + e;
           })}
         </div>
         <div className="title-legend-container">
@@ -114,6 +114,7 @@ const PortfolioItem: React.FC<Props> = ({
               <div className="details-body">{description}</div>
             </div>
           </div>
+          {/* ------------- MOBILE DETAILS -------------- */}
           <div className="mobile-details-content">
             <div className="details-left">
               <div className="details-title">CLIENT</div>
@@ -124,12 +125,12 @@ const PortfolioItem: React.FC<Props> = ({
               <div className="details-body">{client}</div>
               <div className="details-body">
                 {expertise.map((e, i) => {
-                  return i > 0 ? " / " + e.toLowerCase() : "" + e.toLowerCase();
+                  return i > 0 ? " / " + e : "" + e;
                 })}
               </div>
               <div className="details-body">
                 {stack.map((s, i) => {
-                  return i > 0 ? " / " + s.toLowerCase() : "" + s.toLowerCase();
+                  return i > 0 ? " / " + s : "" + s;
                 })}
               </div>
             </div>

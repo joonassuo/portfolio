@@ -180,10 +180,23 @@
   width: 60%;
 }
 
+#details-image-lifetracker {
+  position: absolute;
+  bottom: 0;
+  top: unset;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 600px) {
   .portfolio-item-index {
     font-size: 5vw;
     margin-top: 5%;
+  }
+
+  .mask-expertise {
+    font-size: 1.6vh;
+    font-weight: 100;
+    padding-top: 1vh;
   }
 
   .item-image {
@@ -232,12 +245,5 @@
   #item-image-lifetracker {
     width: 140% !important;
     max-width: 140%;
-  }
-
-  #details-image-lifetracker {
-    position: absolute;
-    bottom: 0;
-    top: unset;
-    transform: translateX(-50%);
   }
 }
