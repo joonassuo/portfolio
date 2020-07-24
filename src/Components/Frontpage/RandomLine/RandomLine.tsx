@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./randomLine.css";
 
 interface Props {
@@ -8,19 +8,12 @@ interface Props {
 }
 
 const RandomLine: React.FC<Props> = ({ position, speed, maxHeight }) => {
-  const [height, setHeight] = useState<number>(0);
   useEffect(() => {
-    setTimeout(() => {
-      if (height < maxHeight) setHeight(height + 1);
-    }, speed);
+    document.documentElement.style.setProperty("--height", maxHeight + "px");
+    document.documentElement.style.setProperty("--speed", speed + "s");
   });
 
-  // Set style on each render
-  const style: object = {
-    height: height + "px",
-    left: position + "%",
-  };
-  return <div className="random-line" style={style}></div>;
+  return <div className="random-line" style={{ left: position + "%" }}></div>;
 };
 
 export default RandomLine;

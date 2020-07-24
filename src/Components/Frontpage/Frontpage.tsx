@@ -23,11 +23,11 @@ const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
   useEffect(() => {
     window.scrollTo(0, 1);
     var lineArray: Array<Line> = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 400; i++) {
       var line = {
-        maxHeight: getRandomNumber(30, 800),
+        maxHeight: getRandomNumber(812, 812),
         position: getRandomNumber(0, 100),
-        speed: getRandomNumber(50, 100),
+        speed: getRandomNumber(2, 2),
       };
       lineArray.push(line);
     }
@@ -38,6 +38,8 @@ const Frontpage: React.FC<Props> = ({ toggleAboutClass, portfolioIndex }) => {
   return (
     <div className="frontpage-container">
       {lines.map((line) => {
+        setTimeout(() => {}, 500);
+
         return (
           <RandomLine
             maxHeight={line.maxHeight}

@@ -1,4 +1,17 @@
+:root {
+  --speed: 0s;
+  --height: 0px;
+}
+
 .random-line {
-  border-left: 2px solid black;
+  border-left: 2px solid grey;
   position: fixed;
+  animation: random-line var(--speed) forwards;
+  height: 0px;
+}
+
+@keyframes random-line {
+  100% {
+    height: var(--height);
+  }
 }
