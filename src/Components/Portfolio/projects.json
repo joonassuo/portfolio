@@ -7,7 +7,9 @@
       "expertise": ["Design", "Frontend", "Backend"],
       "description": "Skill-sharing app created mainly for Hive Helsinki students - to facilitate networking within the school in a fun and natural way. The service utilizes the 42 API for authentification.",
       "stack": ["React", "Redux", "NodeJS"],
-      "client": "Personal Project"
+      "client": "Personal Project",
+      "website": "https://beeswax.herokuapp.com",
+      "code": "https://github.com/joonassuo/Beeswax"
     },
     {
       "title": "sannasilander",

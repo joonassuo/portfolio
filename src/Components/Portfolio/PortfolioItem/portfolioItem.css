@@ -205,6 +205,10 @@
     padding-top: 1vh;
   }
 
+  .mask-toggle-info-button {
+    background-color: transparent;
+  }
+
   .item-image {
     max-width: 95%;
     max-height: 95%;
@@ -245,11 +249,5 @@
   .mobile-details-description {
     margin-top: 5%;
     width: 90%;
-  }
-
-  /* LIFETRACKER ON MOBILE */
-  #item-image-lifetracker {
-    width: 140% !important;
-    max-width: 140%;
   }
 }

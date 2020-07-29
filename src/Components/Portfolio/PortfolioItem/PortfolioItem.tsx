@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./portfolioItem.css";
 
 interface Props {
@@ -29,8 +29,42 @@ const PortfolioItem: React.FC<Props> = ({
   client,
 }) => {
   const [slideDetails, setSlideDetails] = useState<string>("");
+  const mobileTouchX = useRef<number>(0);
+  const mobileTouchY = useRef<number>(0);
+
   return (
-    <div className={slideClass + " portfolio-item-container"}>
+    <div
+      className={slideClass + " portfolio-item-container"}
+      // Close details on wheel if necessary
+      onWheel={(e) => {
+        if (slideDetails === "slide-from-right")
+          setSlideDetails("slide-to-right");
+      }}
+      // MOBILE TOUCH EVENTS
+      onTouchStart={(e) => {
+        // Store touch start X and Y coords in ref
+        mobileTouchX.current = e.changedTouches[0].clientX;
+        mobileTouchY.current = e.changedTouches[0].clientY;
+      }}
+      onTouchEnd={(e) => {
+        // Get end coordinates for touch end X and Y
+        let touchEndX = e.changedTouches[0].clientX;
+        let touchEndY = e.changedTouches[0].clientY;
+        let deltaX = mobileTouchX.current - touchEndX;
+        let deltaY = mobileTouchY.current - touchEndY;
+        let directionX = deltaX > 0 ? 1 : -1;
+
+        // If enough swipe, slide view
+        if (Math.abs(deltaX) > 60) {
+          directionX === 1
+            ? setSlideDetails("slide-from-right")
+            : setSlideDetails("slide-to-right");
+        }
+        if (Math.abs(deltaY) > 60 && slideDetails === "slide-from-right") {
+          setSlideDetails("slide-to-right");
+        }
+      }}
+    >
       <div className="portfolio-item-mask">
         <div className="portfolio-item-index">
           {index < 10 ? ".0" + (index + 1) : "." + (index + 1)}
@@ -53,7 +87,7 @@ const PortfolioItem: React.FC<Props> = ({
           className="mask-toggle-info-button animate-appear"
           onClick={() => setSlideDetails("slide-from-right")}
         >
-          <img src="/icons/arrow.png" alt="arrow" />
+          <img src="/icons/arrow-white.png" alt="arrow" />
         </div>
       </div>
       <div className="portfolio-item-picture-container">
@@ -148,6 +182,28 @@ const PortfolioItem: React.FC<Props> = ({
               <div className="details-title">DESCRIPTION</div>
               <div className="details-body">{description}</div>
             </div>
+            {website ? (
+              <a
+                href={website}
+                className="details-link"
+                id="link-live"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live
+              </a>
+            ) : null}
+            {code ? (
+              <a
+                href={code}
+                className="details-link"
+                id="link-code"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Code
+              </a>
+            ) : null}
           </div>
         </div>
       </div>

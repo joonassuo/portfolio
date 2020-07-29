@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Frontpage from "./Components/Frontpage/Frontpage";
 import About from "./Components/About/About";
 import projects from "./Components/Portfolio/projects.json";
@@ -12,12 +12,6 @@ const App: React.FC = () => {
   const [scrollDirection, setScrollDirection] = useState<number | null>(null);
   const [disableWheel, setDisableWheel] = useState<boolean>(false);
   const mobileTouchStart = useRef<number>(0);
-
-  useEffect(() => {
-    document.body.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-    });
-  });
 
   // On wheel event, change potfolio page
   const onWheel = (direction: number) => {
@@ -43,11 +37,9 @@ const App: React.FC = () => {
     <div
       className="App"
       onWheel={(e) => {
-        e.preventDefault();
         onWheel(e.deltaY);
       }}
       onTouchStart={(e) => {
-        e.preventDefault();
         mobileTouchStart.current = e.changedTouches[0].clientY;
       }}
       onTouchEnd={(e) => {
