@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const onWheel = (direction: number) => {
     if (
       disableWheel ||
-      (direction > 0 && portfolioIndex === 2) ||
+      (direction > 0 && portfolioIndex === 3) ||
       (direction < 0 && portfolioIndex === -1)
     ) {
       return;

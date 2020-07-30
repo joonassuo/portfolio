@@ -131,6 +131,7 @@
 .details-picture-container {
   background-color: rgb(211, 211, 211);
   position: relative;
+  overflow: hidden;
 }
 
 .details-image {
@@ -186,11 +187,13 @@
   margin-top: 1vh;
 }
 
-#details-image-lifetracker {
-  position: absolute;
-  bottom: 0;
-  top: unset;
-  transform: translateX(-50%);
+#item-image-fdf,
+#details-image-fdf {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  max-width: unset;
+  max-height: unset;
 }
 
 @media (max-width: 600px) {
@@ -249,5 +252,9 @@
   .mobile-details-description {
     margin-top: 5%;
     width: 90%;
+  }
+
+  #details-image-fdf {
+    height: 250% !important;
   }
 }

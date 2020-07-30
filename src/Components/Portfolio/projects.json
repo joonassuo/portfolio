@@ -32,6 +32,16 @@
       "client": "Aya Brace",
       "website": "http://islajournal.com",
       "code": "https://github.com/joonassuo/Islajournal"
+    },
+    {
+      "title": "FDF",
+      "legend": "3D projector",
+      "picture": "/projects/fdf/fdf.png",
+      "expertise": ["Algorithm, 3D Presentation"],
+      "description": "The task was to create a program that takes in an array of xyz-coordinates and projects them to a 3D plane. The project is written entirely in C, so memory management was crucial to ensure zero memory leakage. The starting point is an isometric projection, but the program allows for rotations around all axis.",
+      "stack": ["C"],
+      "client": "School Project",
+      "code": "https://github.com/joonassuo/FDF"
     }
   ]
 }
