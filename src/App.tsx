@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { css } from "@emotion/core";
+import SkewLoader from "react-spinners/SkewLoader";
 import Frontpage from "./Components/Frontpage/Frontpage";
 import About from "./Components/About/About";
 import projects from "./Components/Portfolio/projects.json";
@@ -11,6 +13,7 @@ const App: React.FC = () => {
   const [portfolioIndex, setPortfolioIndex] = useState<number | null>(null);
   const [scrollDirection, setScrollDirection] = useState<number | null>(null);
   const [disableWheel, setDisableWheel] = useState<boolean>(false);
+  const [showSpinner, setShowSpinner] = useState<boolean>(false);
   const mobileTouchStart = useRef<number>(0);
 
   // On wheel event, change potfolio page
@@ -22,6 +25,7 @@ const App: React.FC = () => {
     ) {
       return;
     }
+    if (aboutClass === "slide-in") setAboutClass("slide-out");
     let n = direction > 0 ? 1 : -1;
     let indx = portfolioIndex === null ? 0 : portfolioIndex + n;
     setScrollDirection(n);
@@ -49,10 +53,27 @@ const App: React.FC = () => {
         if (Math.abs(delta) > 60) onWheel(direction);
       }}
     >
-      <Frontpage
-        toggleAboutClass={setAboutClass}
-        portfolioIndex={portfolioIndex}
+      {showSpinner ? (
+        <div className="loading-screen">
+          <div className="spinner-container">
+            <SkewLoader size={50} />
+          </div>
+        </div>
+      ) : null}
+      <img
+        src="/icons/arrow.png"
+        alt="arrpw"
+        style={{
+          position: "fixed",
+          bottom: 0,
+          left: "50%",
+          zIndex: 2000000,
+        }}
+        onClick={() => {
+          setShowSpinner(true);
+        }}
       />
+      <Frontpage toggleAboutClass={setAboutClass} aboutClass={aboutClass} />
       {projects.projects.map((project, index) => {
         let scrollClass;
         if (portfolioIndex === null) {

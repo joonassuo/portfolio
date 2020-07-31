@@ -10,6 +10,15 @@
   overflow: hidden;
 }
 
+.hide-about-mask {
+  width: 75vw;
+  height: 100vh;
+  position: fixed;
+  left: 25vw;
+  top: 0;
+  z-index: 1000;
+}
+
 #frontpage-logo {
   width: 55%;
   height: auto;
@@ -35,17 +44,6 @@
 #contact {
   right: 0;
   transform: translateY(-50%) rotate(90deg);
-}
-
-.links-container {
-  position: absolute;
-  bottom: 10%;
-  display: none;
-}
-
-.social-link {
-  width: 3rem;
-  margin: 0 2rem 0 2rem;
 }
 
 #scroll-arrow {

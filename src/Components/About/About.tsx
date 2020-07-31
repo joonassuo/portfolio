@@ -9,86 +9,65 @@ interface Props {
 const About: React.FC<Props> = ({ slideClass, toggleClass }) => {
   return (
     <div id="about-container" className={slideClass}>
-      <img
-        src="/icons/arrow.png"
-        alt="back-arrow"
-        id="about-back"
-        onClick={() => toggleClass("slide-out")}
-      />
-      <div id="quote">
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus
-        veniam nemo possimus unde? Illum a expedita distinctio minus tempore."
+      <div className="about-title">.about</div>
+      <div className="about-description">
+        A web-designer and full-stack developer from Helsinki, Finland. Master
+        of Science and student at Hive Helsinki.
+        <br />
+        <br />
+        Always on the lookout for new and exciting projects - please don't
+        hesitate to contact me for enquiries.
       </div>
-      <div id="languages-label-container">
-        <div id="languages-label">languages</div>
-        <div className="strikethrough"></div>
+      <div className="about-line"></div>
+      <div className="about-stack-container">
+        <div className="stack-left">
+          <div className="stack-title">STACK</div>
+          <div className="stack">
+            c<br />
+            html & css
+            <br />
+            javascript
+            <br />
+            nodejs
+            <br />
+            react
+            <br />
+            redux
+            <br />
+            typescript
+          </div>
+        </div>
+        <div className="stack-right">
+          <div className="stack-title">TECH</div>
+          <div className="tech">
+            aws
+            <br />
+            docker
+            <br />
+            linux
+            <br />
+            mongodb
+          </div>
+        </div>
       </div>
-      <div className="languages-container">
+      <div className="about-links-container">
         <img
-          src="/langs/react.png"
-          alt="react"
-          id="react-icon"
-          className="languages-icon"
+          src="/social/github.png"
+          alt="github"
+          className="social-link"
+          id="github-icon"
         />
         <img
-          src="/langs/redux.png"
-          alt="redux"
-          id="redux-icon"
-          className="languages-icon"
+          src="/social/linkedin.png"
+          alt="linkedin"
+          className="social-link"
+          id="linkedin-icon"
         />
         <img
-          src="/langs/javascript.png"
-          alt="javascript"
-          id="javascript-icon"
-          className="languages-icon"
-        />
-        <img
-          src="/langs/typescript.png"
-          alt="typescript"
-          id="typescript-icon"
-          className="languages-icon"
-        />
-        <img
-          src="/langs/c.png"
-          alt="c"
-          id="c-icon"
-          className="languages-icon"
-        />
-        <img
-          src="/langs/node.png"
-          alt="node"
-          id="node-icon"
-          className="languages-icon"
-        />
-      </div>
-      <div id="other-tech-label-container">
-        <div id="other-tech-label">other tech</div>
-        <div className="strikethrough"></div>
-      </div>
-      <div className="tech-container">
-        <img
-          src="/tech/aws.png"
-          alt="aws"
-          id="aws-icon"
-          className="tech-icon"
-        />
-        <img
-          src="/tech/mongo.png"
-          alt="mongo"
-          id="mongo-icon"
-          className="tech-icon"
-        />
-        <img
-          src="/tech/docker.png"
-          alt="docker"
-          id="docker-icon"
-          className="tech-icon"
-        />
-        <img
-          src="/tech/linux.png"
-          alt="linux"
-          id="linux-icon"
-          className="tech-icon"
+          src="/social/email.png"
+          alt="email"
+          className="social-link"
+          id="email-icon"
         />
       </div>
     </div>
