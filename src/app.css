@@ -4,11 +4,13 @@ body {
 }
 
 .to-top-button {
-  width: 4vw;
-  height: 4vw;
+  width: 2vw;
+  height: 2vw;
+  min-width: 15px;
+  min-height: 15px;
   position: fixed;
-  top: 5vw;
-  right: 4vw;
+  top: 2%;
+  right: 3%;
   z-index: 20000;
 }
 

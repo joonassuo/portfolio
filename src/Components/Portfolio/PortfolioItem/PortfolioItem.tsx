@@ -103,7 +103,7 @@ const PortfolioItem: React.FC<Props> = ({
           className="mask-toggle-info-button"
           onClick={() => setSlideDetails("slide-to-right")}
         >
-          <img src="/icons/arrow.png" alt="arrow" id="toggle-back" />
+          <img src="/icons/arrow-white.png" alt="arrow" id="toggle-back" />
         </div>
         <div className="details-picture-container">
           <img
@@ -169,8 +169,8 @@ const PortfolioItem: React.FC<Props> = ({
               <div className="details-title">CLIENT</div>
               <div className="details-title">PROJECT</div>
               <div className="details-title">STACK</div>
-              {code ? <div className="details-title">LIVE</div> : null}
-              {website ? <div className="details-title">CODE</div> : null}
+              {website ? <div className="details-title">LIVE</div> : null}
+              {code ? <div className="details-title">CODE</div> : null}
             </div>
             <div className="details-right">
               <div className="details-body">{client}</div>

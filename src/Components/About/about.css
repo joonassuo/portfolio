@@ -1,12 +1,12 @@
 /* slide animations */
 .slide-in {
-  animation: slide-in 0.5s forwards;
-  -webkit-animation: slide-in 0.5s forwards;
+  animation: slide-in 0.7s forwards;
+  -webkit-animation: slide-in 0.7s forwards;
 }
 
 .slide-out {
-  animation: slide-out 0.5s forwards;
-  -webkit-animation: slide-out 0.5s forwards;
+  animation: slide-out 0.7s forwards;
+  -webkit-animation: slide-out 0.7s forwards;
 }
 
 @keyframes slide-in {
@@ -42,6 +42,7 @@
 /* main content */
 #about-container {
   width: 25vw;
+  min-width: 400px;
   height: 100vh;
   background-color: lightgray;
   position: absolute;
@@ -50,7 +51,7 @@
 }
 
 .about-title {
-  font-size: 2.5vw;
+  font-size: 2rem;
   margin: 5vh 0 8vh 8%;
 }
 
@@ -96,18 +97,19 @@
 
 .about-links-container {
   position: absolute;
-  bottom: 5%;
+  bottom: 7%;
   width: 100%;
   text-align: center;
 }
 
 .social-link {
   width: 2.2vw;
-  margin: 0 1.3vw;
+  min-width: 40px;
+  margin: 0 5%;
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   #about-container {
     width: 100vw;
     height: 100vh;
@@ -115,6 +117,10 @@
     position: absolute;
     transform: translateY(-100%);
     z-index: 100;
+  }
+
+  .about-links-container {
+    bottom: 12%;
   }
 
   /* Mobile slide animations */

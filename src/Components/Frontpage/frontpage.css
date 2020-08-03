@@ -10,6 +10,11 @@
   overflow: hidden;
 }
 
+.mobile-about,
+.mobile-portfolio {
+  display: none;
+}
+
 .hide-about-mask {
   width: 75vw;
   height: 100vh;
@@ -27,8 +32,8 @@
   transform: translateY(-50%);
 }
 
-#about,
-#contact {
+#about {
+  font-family: "Playfair Display", serif;
   position: absolute;
   top: 50%;
   font-size: 2rem;
@@ -41,26 +46,64 @@
   transform: translateY(-50%) rotate(-90deg);
 }
 
-#contact {
-  right: 0;
-  transform: translateY(-50%) rotate(90deg);
-}
-
 #scroll-arrow {
   position: absolute;
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
+  width: 2.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  .hide-about-mask {
+    display: none;
+  }
+
   #frontpage-logo {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
 
   #about,
   #scroll-arrow {
     display: none;
+  }
+
+  .mobile-about,
+  .mobile-portfolio {
+    display: block;
+    position: fixed;
+    font-family: "Playfair Display", serif;
+    font-size: 4vw;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1000;
+    letter-spacing: 2vw;
+  }
+
+  .mobile-about {
+    top: 3%;
+  }
+
+  .mobile-portfolio {
+    bottom: 3%;
+  }
+
+  #mobile-about-arrow,
+  #mobile-portfolio-arrow {
+    width: 5vw;
+    height: auto;
+  }
+
+  #mobile-about-arrow {
+    transform: rotate(90deg);
+  }
+
+  .mobile-portfolio-title {
+    margin-bottom: 7%;
+  }
+
+  #mobile-portfolio-arrow {
+    transform: rotate(270deg);
   }
 }

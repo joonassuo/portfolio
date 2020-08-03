@@ -49,7 +49,7 @@
 
 .portfolio-item-index {
   margin: 1.5% 0 1% 2.5%;
-  font-size: 3vw;
+  font-size: 2.3vw;
   font-family: serif;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .mask-title {
-  font-size: 8vw;
+  font-size: 6vw;
   font-family: "Playfair Display", serif;
   letter-spacing: 0vw;
   font-weight: 50;
@@ -82,7 +82,7 @@
 }
 
 .mask-legend {
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 100;
 }
 
@@ -90,12 +90,12 @@
   position: fixed;
   right: 5%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(180deg);
   background-color: rgb(151, 151, 151);
   border-radius: 50%;
   padding: 1vw;
-  width: 3vw;
-  height: 3vw;
+  width: 1.5vw;
+  height: 1.5vw;
   min-width: 20px;
   min-height: 20px;
   z-index: 2000;
@@ -202,16 +202,24 @@
   max-width: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .portfolio-item-index {
-    font-size: 5vw;
+    font-size: 6vw;
     margin-top: 5%;
   }
 
   .mask-expertise {
-    font-size: 1.6vh;
+    font-size: 1.8vh;
     font-weight: 100;
     padding-top: 1vh;
+  }
+
+  .mask-title {
+    font-size: 8vw;
+  }
+
+  .mask-legend {
+    font-size: 4vw;
   }
 
   .mask-toggle-info-button {

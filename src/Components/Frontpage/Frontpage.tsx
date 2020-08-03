@@ -13,6 +13,14 @@ const Frontpage: React.FC<Props> = ({ toggleAboutClass, aboutClass }) => {
 
   return (
     <div className="frontpage-container">
+      <div className="mobile-about">
+        <img src="/icons/arrow.png" alt="arrow" id="mobile-about-arrow" />
+        <div className="mobile-about-title">about</div>
+      </div>
+      <div className="mobile-portfolio">
+        <div className="mobile-portfolio-title">portfolio</div>
+        <img src="/icons/arrow.png" alt="arrow" id="mobile-portfolio-arrow" />
+      </div>
       <img id="frontpage-logo" src="/frontpage_logo.png" alt="logo" />
       <div
         className="hide-about-mask"

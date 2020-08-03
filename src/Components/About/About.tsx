@@ -51,24 +51,38 @@ const About: React.FC<Props> = ({ slideClass, toggleClass }) => {
         </div>
       </div>
       <div className="about-links-container">
-        <img
-          src="/social/github.png"
-          alt="github"
-          className="social-link"
-          id="github-icon"
-        />
-        <img
-          src="/social/linkedin.png"
-          alt="linkedin"
-          className="social-link"
-          id="linkedin-icon"
-        />
-        <img
-          src="/social/email.png"
-          alt="email"
-          className="social-link"
-          id="email-icon"
-        />
+        <a
+          href="https://github.com/joonassuo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/social/github.png"
+            alt="github"
+            className="social-link"
+            id="github-icon"
+          />
+        </a>
+        <a
+          href="https://linkedin.com/in/joonassuonpera"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/social/linkedin.png"
+            alt="linkedin"
+            className="social-link"
+            id="linkedin-icon"
+          />
+        </a>
+        <a href="mailto:joonas.suonpera@gmail.com">
+          <img
+            src="/social/email.png"
+            alt="email"
+            className="social-link"
+            id="email-icon"
+          />
+        </a>
       </div>
     </div>
   );
