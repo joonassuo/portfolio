@@ -39,7 +39,7 @@ const App: React.FC = () => {
     setDisableWheel(true);
     setTimeout(() => {
       setDisableWheel(false);
-    }, 400);
+    }, 800);
   };
 
   return (
