@@ -3,6 +3,15 @@ body {
   overflow: hidden !important;
 }
 
+.to-top-button {
+  width: 4vw;
+  height: 4vw;
+  position: fixed;
+  top: 5vw;
+  right: 4vw;
+  z-index: 20000;
+}
+
 .loading-screen {
   width: 100vw;
   height: 100vh;

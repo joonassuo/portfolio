@@ -216,6 +216,7 @@
 
   .mask-toggle-info-button {
     background-color: transparent;
+    transform: rotate(180deg);
   }
 
   .item-image {
@@ -227,9 +228,13 @@
     display: none;
   }
 
+  #toggle-back {
+    display: none;
+  }
+
   .mobile-details-content {
     display: block;
-    padding: 10% 0 5% 10%;
+    padding: 5% 0 5% 10%;
   }
 
   .details-picture-container {
@@ -242,8 +247,18 @@
 
   .details-title,
   .details-body {
+    font-family: unset;
     font-size: 3.5vw;
+    min-height: 2vh;
     margin-bottom: 8px;
+  }
+
+  .details-line {
+    width: 100%;
+    position: relative;
+    left: -5%;
+    border-top: 1px solid lightgray;
+    margin-bottom: 10%;
   }
 
   .details-left,
@@ -256,8 +271,22 @@
   }
 
   .mobile-details-description {
-    margin-top: 5%;
+    margin: 5% 0 10% 0;
     width: 90%;
+  }
+
+  .mobile-details-description .details-title {
+    display: none;
+  }
+
+  .mobile-details-description .details-body {
+    font-size: unset;
+    font-style: italic;
+    color: grey;
+  }
+
+  .details-link {
+    color: indigo;
   }
 
   #details-image-fdf {

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { css } from "@emotion/core";
+//import { css } from "@emotion/core";
 import SkewLoader from "react-spinners/SkewLoader";
 import Frontpage from "./Components/Frontpage/Frontpage";
 import About from "./Components/About/About";
@@ -21,9 +21,14 @@ const App: React.FC = () => {
     if (
       disableWheel ||
       (direction > 0 && portfolioIndex === 3) ||
-      (direction < 0 && portfolioIndex === -1)
+      (direction < 0 && portfolioIndex === -2)
     ) {
       return;
+    }
+    if (portfolioIndex === -1 && direction < 0) {
+      setAboutClass("slide-in");
+    } else if (portfolioIndex === -2 && direction > 0) {
+      setAboutClass("slide-out");
     }
     if (aboutClass === "slide-in") setAboutClass("slide-out");
     let n = direction > 0 ? 1 : -1;
@@ -34,7 +39,7 @@ const App: React.FC = () => {
     setDisableWheel(true);
     setTimeout(() => {
       setDisableWheel(false);
-    }, 1000);
+    }, 400);
   };
 
   return (
@@ -60,19 +65,20 @@ const App: React.FC = () => {
           </div>
         </div>
       ) : null}
-      <img
-        src="/icons/arrow.png"
-        alt="arrpw"
-        style={{
-          position: "fixed",
-          bottom: 0,
-          left: "50%",
-          zIndex: 2000000,
-        }}
-        onClick={() => {
-          setShowSpinner(true);
-        }}
-      />
+      {portfolioIndex != null && portfolioIndex > -1 ? (
+        <img
+          className="to-top-button"
+          src="/icons/close.png"
+          alt="close"
+          onClick={() => {
+            setShowSpinner(true);
+            setPortfolioIndex(-1);
+            setTimeout(() => {
+              setShowSpinner(false);
+            }, 1000);
+          }}
+        />
+      ) : null}
       <Frontpage toggleAboutClass={setAboutClass} aboutClass={aboutClass} />
       {projects.projects.map((project, index) => {
         let scrollClass;

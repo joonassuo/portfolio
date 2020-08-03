@@ -105,3 +105,46 @@
   width: 2.2vw;
   margin: 0 1.3vw;
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+  #about-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgray;
+    position: absolute;
+    transform: translateY(-100%);
+    z-index: 100;
+  }
+
+  /* Mobile slide animations */
+  @keyframes slide-in {
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @-webkit-keyframes slide-in {
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @-webkit-keyframes slide-out {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+}

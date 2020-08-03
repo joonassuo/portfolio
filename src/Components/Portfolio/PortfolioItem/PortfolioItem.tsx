@@ -160,10 +160,17 @@ const PortfolioItem: React.FC<Props> = ({
           </div>
           {/* ------------- MOBILE DETAILS -------------- */}
           <div className="mobile-details-content">
+            <div className="mobile-details-description">
+              <div className="details-title">DESCRIPTION</div>
+              <div className="details-body">{"'" + description + "'"}</div>
+            </div>
+            <div className="details-line"></div>
             <div className="details-left">
               <div className="details-title">CLIENT</div>
               <div className="details-title">PROJECT</div>
               <div className="details-title">STACK</div>
+              {code ? <div className="details-title">LIVE</div> : null}
+              {website ? <div className="details-title">CODE</div> : null}
             </div>
             <div className="details-right">
               <div className="details-body">{client}</div>
@@ -177,33 +184,29 @@ const PortfolioItem: React.FC<Props> = ({
                   return i > 0 ? " / " + s : "" + s;
                 })}
               </div>
+              {website ? (
+                <a
+                  href={website}
+                  className="details-link details-body"
+                  id="link-live"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {website.replace(/https:\/\/|http:\/\//gi, "")}
+                </a>
+              ) : null}
+              {code ? (
+                <a
+                  href={code}
+                  className="details-link details-body"
+                  id="link-code"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {code.replace(/https:\/\/|http:\/\//gi, "")}
+                </a>
+              ) : null}
             </div>
-            <div className="mobile-details-description">
-              <div className="details-title">DESCRIPTION</div>
-              <div className="details-body">{description}</div>
-            </div>
-            {website ? (
-              <a
-                href={website}
-                className="details-link"
-                id="link-live"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live
-              </a>
-            ) : null}
-            {code ? (
-              <a
-                href={code}
-                className="details-link"
-                id="link-code"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Code
-              </a>
-            ) : null}
           </div>
         </div>
       </div>
