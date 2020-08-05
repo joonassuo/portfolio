@@ -18,6 +18,11 @@ const App: React.FC = () => {
 
   // On wheel event, change potfolio page
   const onWheel = (direction: number) => {
+    if (portfolioIndex === null && direction < 0) {
+      setPortfolioIndex(-2);
+      setAboutClass("slide-in");
+      return;
+    }
     if (
       disableWheel ||
       (direction > 0 && portfolioIndex === 3) ||
