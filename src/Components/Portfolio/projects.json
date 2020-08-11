@@ -27,7 +27,7 @@
       "legend": "Issue Two of Fashion Zine",
       "picture": "/projects/islajournal/islajournal.png",
       "expertise": ["Frontend"],
-      "description": "Second issue of Fashion Zine ISLA Journal - transformed to a digital format due to Covid-19 restrictions which made traditional fashion editing problematic.\\nThe client provided the designs, so the emphasis during the work was to realize the artists' vision to the T, and bring it to life on desktop as well as on mobile.",
+      "description": "Second issue of Fashion Zine ISLA Journal - transformed to a digital format due to Covid-19 restrictions which made traditional fashion editing problematic. The client provided the designs, so the emphasis during the work was to realize the artists' vision to the T, and bring it to life on desktop as well as on mobile.",
       "stack": ["React"],
       "client": "Aya Brace",
       "website": "http://islajournal.com",

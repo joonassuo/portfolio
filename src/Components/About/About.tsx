@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css";
+import Div100vh from "react-div-100vh";
 
 interface Props {
   slideClass: string;
@@ -8,7 +9,7 @@ interface Props {
 
 const About: React.FC<Props> = ({ slideClass, toggleClass }) => {
   return (
-    <div id="about-container" className={slideClass}>
+    <Div100vh id="about-container" className={slideClass}>
       <div className="about-title">.about</div>
       <div className="about-description">
         A web-designer and full-stack developer from Helsinki, Finland. Master
@@ -83,7 +84,7 @@ const About: React.FC<Props> = ({ slideClass, toggleClass }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Div100vh>
   );
 };
 

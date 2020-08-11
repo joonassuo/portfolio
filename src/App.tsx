@@ -70,7 +70,7 @@ const App: React.FC = () => {
           </div>
         </div>
       ) : null}
-      {portfolioIndex != null && portfolioIndex > -1 ? (
+      {/* {portfolioIndex != null && portfolioIndex > -1 ? (
         <img
           className="to-top-button"
           src="/icons/close.png"
@@ -83,7 +83,7 @@ const App: React.FC = () => {
             }, 1000);
           }}
         />
-      ) : null}
+      ) : null} */}
       <Frontpage toggleAboutClass={setAboutClass} aboutClass={aboutClass} />
       {projects.projects.map((project, index) => {
         let scrollClass;
@@ -115,6 +115,8 @@ const App: React.FC = () => {
             client={project.client}
             website={project.website}
             code={project.code}
+            setShowSpinner={setShowSpinner}
+            setPortfolioIndex={setPortfolioIndex}
           />
         );
       })}

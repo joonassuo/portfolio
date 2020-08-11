@@ -42,7 +42,6 @@
 /* main content */
 #about-container {
   width: 25vw;
-  height: 100vh;
   background-color: lightgray;
   position: absolute;
   transform: translateX(-100%);
@@ -108,7 +107,6 @@
 @media (max-width: 800px) {
   #about-container {
     width: 100vw;
-    height: 100vh;
     background-color: lightgray;
     position: absolute;
     transform: translateY(-100%);

@@ -3,7 +3,6 @@
   background-color: white;
   top: 0;
   width: 100vw;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -280,7 +279,7 @@
 
   .mobile-details-description {
     margin: 5% 0 10% 0;
-    width: 90%;
+    width: 80%;
   }
 
   .mobile-details-description .details-title {
