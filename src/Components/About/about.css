@@ -42,7 +42,6 @@
 /* main content */
 #about-container {
   width: 25vw;
-  min-width: 400px;
   height: 100vh;
   background-color: lightgray;
   position: absolute;
@@ -52,7 +51,7 @@
 
 .about-title {
   font-size: 2rem;
-  margin: 5vh 0 8vh 8%;
+  margin: 5vh 0 5vh 8%;
 }
 
 .about-description {
@@ -69,7 +68,11 @@
   width: 90%;
   border-top: 1px solid black;
   height: 1px;
-  margin-bottom: 8vh;
+  margin-bottom: 5vh;
+}
+
+.about-links-container {
+  margin: 5vh 0 5vh 8%;
 }
 
 .stack-left,
@@ -95,17 +98,10 @@
   line-height: 150%;
 }
 
-.about-links-container {
-  position: absolute;
-  bottom: 7%;
-  width: 100%;
-  text-align: center;
-}
-
 .social-link {
-  width: 2.2vw;
+  width: 2.5vw;
   min-width: 40px;
-  margin: 0 5%;
+  margin-right: 10%;
 }
 
 /* Mobile */
@@ -119,8 +115,13 @@
     z-index: 100;
   }
 
-  .about-links-container {
-    bottom: 12%;
+  .stack-title {
+    font-size: 2vh;
+  }
+
+  .stack,
+  .tech {
+    font-size: 2vh;
   }
 
   /* Mobile slide animations */

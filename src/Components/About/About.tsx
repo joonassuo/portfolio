@@ -18,38 +18,6 @@ const About: React.FC<Props> = ({ slideClass, toggleClass }) => {
         Always on the lookout for new and exciting projects - please don't
         hesitate to contact me for enquiries.
       </div>
-      <div className="about-line"></div>
-      <div className="about-stack-container">
-        <div className="stack-left">
-          <div className="stack-title">STACK</div>
-          <div className="stack">
-            c<br />
-            html & css
-            <br />
-            javascript
-            <br />
-            nodejs
-            <br />
-            react
-            <br />
-            redux
-            <br />
-            typescript
-          </div>
-        </div>
-        <div className="stack-right">
-          <div className="stack-title">TECH</div>
-          <div className="tech">
-            aws
-            <br />
-            docker
-            <br />
-            linux
-            <br />
-            mongodb
-          </div>
-        </div>
-      </div>
       <div className="about-links-container">
         <a
           href="https://github.com/joonassuo"
@@ -83,6 +51,37 @@ const About: React.FC<Props> = ({ slideClass, toggleClass }) => {
             id="email-icon"
           />
         </a>
+      </div>
+      <div className="about-line"></div>
+
+      <div className="about-stack-container">
+        <div className="stack-left">
+          <div className="stack-title">STACK</div>
+          <div className="stack">
+            c<br />
+            html & css
+            <br />
+            javascript
+            <br />
+            nodejs
+            <br />
+            react & redux
+            <br />
+            typescript
+          </div>
+        </div>
+        <div className="stack-right">
+          <div className="stack-title">TECH</div>
+          <div className="tech">
+            aws
+            <br />
+            docker
+            <br />
+            linux
+            <br />
+            mongodb
+          </div>
+        </div>
       </div>
     </div>
   );
