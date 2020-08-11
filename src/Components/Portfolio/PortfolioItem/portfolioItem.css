@@ -69,7 +69,7 @@
 
 .title-legend-container {
   position: absolute;
-  bottom: 12%;
+  bottom: 20%;
   margin-left: 2.5%;
 }
 
@@ -246,11 +246,11 @@
   }
 
   .details-picture-container {
-    height: 40%;
+    height: 35%;
   }
 
   .details-container {
-    height: 60%;
+    height: 65%;
   }
 
   .details-title,
@@ -280,7 +280,7 @@
 
   .mobile-details-description {
     margin: 5% 0 10% 0;
-    width: 90%;
+    width: 80%;
   }
 
   .mobile-details-description .details-title {
@@ -288,9 +288,8 @@
   }
 
   .mobile-details-description .details-body {
-    font-size: unset;
-    font-style: italic;
     color: rgb(128, 128, 128);
+    font-style: italic;
   }
 
   .details-link {

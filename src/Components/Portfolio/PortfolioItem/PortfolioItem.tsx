@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, SetStateAction } from "react";
 import "./portfolioItem.css";
 
 interface Props {
@@ -13,6 +13,8 @@ interface Props {
   website?: string;
   code?: string;
   client: string;
+  setShowSpinner: React.Dispatch<SetStateAction<boolean>>;
+  setPortfolioIndex: React.Dispatch<SetStateAction<number | null>>;
 }
 
 const PortfolioItem: React.FC<Props> = ({
@@ -27,6 +29,8 @@ const PortfolioItem: React.FC<Props> = ({
   website,
   code,
   client,
+  setShowSpinner,
+  setPortfolioIndex,
 }) => {
   const [slideDetails, setSlideDetails] = useState<string>("");
   const mobileTouchX = useRef<number>(0);
@@ -65,6 +69,18 @@ const PortfolioItem: React.FC<Props> = ({
         }
       }}
     >
+      <img
+        className="to-top-button"
+        src="/icons/close.png"
+        alt="close"
+        onClick={() => {
+          setShowSpinner(true);
+          setPortfolioIndex(-1);
+          setTimeout(() => {
+            setShowSpinner(false);
+          }, 1000);
+        }}
+      />
       <div className="portfolio-item-mask">
         <div className="portfolio-item-index">
           {index < 10 ? ".0" + (index + 1) : "." + (index + 1)}
@@ -160,6 +176,12 @@ const PortfolioItem: React.FC<Props> = ({
           </div>
           {/* ------------- MOBILE DETAILS -------------- */}
           <div className="mobile-details-content">
+            <div
+              className="mask-toggle-info-button animate-appear"
+              onClick={() => setSlideDetails("slide-to-right")}
+            >
+              <img src="/icons/arrow.png" alt="arrow" />
+            </div>
             <div className="mobile-details-description">
               <div className="details-title">DESCRIPTION</div>
               <div className="details-body">{"'" + description + "'"}</div>

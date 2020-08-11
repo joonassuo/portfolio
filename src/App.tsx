@@ -70,20 +70,6 @@ const App: React.FC = () => {
           </div>
         </div>
       ) : null}
-      {portfolioIndex != null && portfolioIndex > -1 ? (
-        <img
-          className="to-top-button"
-          src="/icons/close.png"
-          alt="close"
-          onClick={() => {
-            setShowSpinner(true);
-            setPortfolioIndex(-1);
-            setTimeout(() => {
-              setShowSpinner(false);
-            }, 1000);
-          }}
-        />
-      ) : null}
       <Frontpage toggleAboutClass={setAboutClass} aboutClass={aboutClass} />
       {projects.projects.map((project, index) => {
         let scrollClass;
@@ -115,6 +101,8 @@ const App: React.FC = () => {
             client={project.client}
             website={project.website}
             code={project.code}
+            setShowSpinner={setShowSpinner}
+            setPortfolioIndex={setPortfolioIndex}
           />
         );
       })}
