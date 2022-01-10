@@ -69,18 +69,6 @@ const PortfolioItem: React.FC<Props> = ({
         }
       }}
     >
-      <img
-        className="to-top-button"
-        src="/icons/close.png"
-        alt="close"
-        onClick={() => {
-          setShowSpinner(true);
-          setPortfolioIndex(-1);
-          setTimeout(() => {
-            setShowSpinner(false);
-          }, 1000);
-        }}
-      />
       <div className="portfolio-item-mask">
         <div className="portfolio-item-index">
           {index < 10 ? ".0" + (index + 1) : "." + (index + 1)}

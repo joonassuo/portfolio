@@ -11,12 +11,12 @@ const About: React.FC<Props> = ({ slideClass, toggleClass }) => {
     <div id="about-container" className={slideClass}>
       <div className="about-title">.about</div>
       <div className="about-description">
-        A web-designer and full-stack developer from Helsinki, Finland. Master
-        of Science and student at Hive Helsinki.
+        A web-designer and full-stack developer from Helsinki, Finland. Working
+        as a Freelancer.
         <br />
         <br />
         Always on the lookout for new and exciting projects - please don't
-        hesitate to contact me for enquiries.
+        hesitate to contact me for business enquiries.
       </div>
       <div className="about-links-container">
         <a
@@ -24,62 +24,45 @@ const About: React.FC<Props> = ({ slideClass, toggleClass }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src="/social/github.png"
-            alt="github"
-            className="social-link"
-            id="github-icon"
-          />
+          <img className="shit" src="/social/github.png" alt="github" />
         </a>
         <a
           href="https://linkedin.com/in/joonassuonpera"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src="/social/linkedin.png"
-            alt="linkedin"
-            className="social-link"
-            id="linkedin-icon"
-          />
+          <img className="shit" src="/social/linkedin.png" alt="linkedin" />
         </a>
         <a href="mailto:joonas.suonpera@gmail.com">
-          <img
-            src="/social/email.png"
-            alt="email"
-            className="social-link"
-            id="email-icon"
-          />
+          <img className="shit" src="/social/email.png" alt="email" />
         </a>
       </div>
       <div className="about-line"></div>
 
       <div className="about-stack-container">
         <div className="stack-left">
-          <div className="stack-title">STACK</div>
+          <div className="stack-title">TECH</div>
           <div className="stack">
+            angular
+            <br />
             c<br />
+            graphQL
+            <br />
             html & css
             <br />
             javascript
             <br />
-            nodejs
+            nodeJS
+            <br />
+            postgreSQL
+            <br />
+            python
             <br />
             react & redux
             <br />
+            react native
+            <br />
             typescript
-          </div>
-        </div>
-        <div className="stack-right">
-          <div className="stack-title">TECH</div>
-          <div className="tech">
-            aws
-            <br />
-            docker
-            <br />
-            linux
-            <br />
-            mongodb
           </div>
         </div>
       </div>

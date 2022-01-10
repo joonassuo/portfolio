@@ -25,7 +25,7 @@ const App: React.FC = () => {
     }
     if (
       disableWheel ||
-      (direction > 0 && portfolioIndex === 3) ||
+      (direction > 0 && portfolioIndex === projects.projects.length - 1) ||
       (direction < 0 && portfolioIndex === -2)
     ) {
       return;
@@ -70,6 +70,20 @@ const App: React.FC = () => {
           </div>
         </div>
       ) : null}
+      {portfolioIndex != null && portfolioIndex > -1 && (
+        <img
+          className="to-top-button"
+          src="/icons/close.png"
+          alt="close"
+          onClick={() => {
+            setShowSpinner(true);
+            setPortfolioIndex(-1);
+            setTimeout(() => {
+              setShowSpinner(false);
+            }, 1000);
+          }}
+        />
+      )}
       <Frontpage toggleAboutClass={setAboutClass} aboutClass={aboutClass} />
       {projects.projects.map((project, index) => {
         let scrollClass;
@@ -90,6 +104,7 @@ const App: React.FC = () => {
         }
         return (
           <PortfolioItem
+            key={index}
             index={index}
             slideClass={scrollClass}
             expertise={project.expertise}
@@ -100,7 +115,6 @@ const App: React.FC = () => {
             title={project.title}
             client={project.client}
             website={project.website}
-            code={project.code}
             setShowSpinner={setShowSpinner}
             setPortfolioIndex={setPortfolioIndex}
           />

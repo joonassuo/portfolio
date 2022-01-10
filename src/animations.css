@@ -1,22 +1,22 @@
 /* SLIDE ANIMATIONS */
 .slide-from-bottom {
-  animation: slide-from-bottom 1s forwards;
-  -webkit-animation: slide-from-bottom 1s forwards;
+  animation: slide-from-bottom 0.5s forwards;
+  -webkit-animation: slide-from-bottom 0.5s forwards;
 }
 
 .slide-to-bottom {
-  animation: slide-to-bottom 1s forwards;
-  -webkit-animation: slide-to-bottom 1s forwards;
+  animation: slide-to-bottom 0.5s forwards;
+  -webkit-animation: slide-to-bottom 0.5s forwards;
 }
 
 .slide-from-top {
-  animation: slide-from-top 1s forwards;
-  -webkit-animation: slide-from-top 1s forwards;
+  animation: slide-from-top 0.5s forwards;
+  -webkit-animation: slide-from-top 0.5s forwards;
 }
 
 .slide-to-top {
-  animation: slide-to-top 1s forwards;
-  -webkit-animation: slide-to-top 1s forwards;
+  animation: slide-to-top 0.5s forwards;
+  -webkit-animation: slide-to-top 0.5s forwards;
 }
 
 .slide-from-right {
@@ -158,10 +158,10 @@
 /* LINE APPEAR ANIMATIONS */
 .slide-from-bottom div.line-appear,
 .slide-from-top div.line-appear {
-  animation: line-appear forwards 1s;
+  animation: line-appear forwards 0.5s;
   animation-delay: 0.2s;
   --webkit-animation-delay: 0.2s;
-  --webkit-animation: line-appear forwards 1s;
+  --webkit-animation: line-appear forwards 0.5s;
 }
 
 @keyframes line-appear {
@@ -178,8 +178,8 @@
 
 .slide-to-bottom div.line-appear,
 .slide-to-top div.line-appear {
-  animation: line-disappear forwards 1s;
-  --webkit-animation: line-appear forwards 1s;
+  animation: line-disappear forwards 0.5s;
+  --webkit-animation: line-appear forwards 0.5s;
 }
 
 @keyframes line-disappear {
@@ -195,9 +195,9 @@
 .slide-from-bottom div.animate-appear,
 .slide-from-top div.animate-appear {
   animation: animate-appear forwards 0.5s;
-  animation-delay: 1s;
-  --webkit-animation: animate-appear forwards 1s;
-  --webkit-animation-delay: 1s;
+  animation-delay: 0.5s;
+  --webkit-animation: animate-appear forwards 0.5s;
+  --webkit-animation-delay: 0.5s;
 }
 
 @keyframes animate-appear {
@@ -240,8 +240,8 @@
 .slide-from-bottom div.animate-spacing,
 .slide-from-top div.animate-spacing {
   animation: animate-spacing-expand forwards 0.5s;
-  animation-delay: 1s;
-  --webkit-animation-delay: 1s;
+  animation-delay: 0.5s;
+  --webkit-animation-delay: 0.5s;
   --webkit-animation: animate-spacing-expand forwards 0.5s;
 }
 
