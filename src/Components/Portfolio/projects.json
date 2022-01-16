@@ -1,63 +1,63 @@
 {
-  "projects": [
-    {
-      "title": "Containergrid",
-      "legend": "Waste Management and Logistics Software",
-      "picture": "/projects/containergrid/containergrid.png",
-      "expertise": ["Frontend", "Backend", "Mobile"],
-      "description": "Developing a platform to make waste-management logistics easier for the whole value chain. Building new functionality on both the web platform as well as the native mobile app. One of the major responsibilities was to create a fleet-tracking system based on mobile location, and implement a visual dashboard for it in the web app.",
-      "stack": ["Angular", "React Native", "GraphQL", "NodeJS"],
-      "client": "Containergrid GmbH (GER)",
-      "website": "https://containergrid.de"
-    },
-    {
-      "title": "Fondion",
-      "legend": "Construction ERP Software",
-      "picture": "/projects/fondion/fondion.png",
-      "expertise": ["Frontend", "Backend"],
-      "description": "The client is building tailor-made ERP software specifically for companies working in construction and industry. My main focus on the project was to implement new functionality as well to improve existing logic to better cater to the customers. It was a pleasure to work with a highly test driven and strictly typed codebase",
-      "stack": ["React", "Typescript", "Python", "PostgreSQL"],
-      "client": "Fondion Oy",
-      "website": "https://fondion.com"
-    },
-    {
-      "title": "sannasilander",
-      "legend": "Personal Portfolio",
-      "picture": "/projects/sannasilander/collection1.png",
-      "expertise": ["Design", "Frontend"],
-      "description": "Personal portfolio for stylist Sanna Silander. The client wanted a simplistic website with a clear focus on the work. Responsiveness was a major concern as most of her potential clients would be browsing on mobile devices.",
-      "stack": ["jQuery", "HTML & css"],
-      "client": "Sanna Silander",
-      "website": "http://sannasilander.com"
-    },
-    {
-      "title": "Beeswax",
-      "legend": "Skill Sharing Web App",
-      "picture": "/projects/beeswax/collection1.png",
-      "expertise": ["Design", "Frontend", "Backend"],
-      "description": "Skill-sharing app created mainly for Hive Helsinki students - to facilitate networking within the school in a fun and natural way. The service utilizes the school's API for profile creation and authentification.",
-      "stack": ["React", "NodeJS"],
-      "client": "Personal Project",
-      "website": "https://beeswax.herokuapp.com"
-    },
-    {
-      "title": "islajournal",
-      "legend": "Issue Two of Fashion Zine",
-      "picture": "/projects/islajournal/islajournal.png",
-      "expertise": ["Frontend"],
-      "description": "Second issue of Fashion Zine ISLA Journal - transformed to a digital format due to Covid-19 restrictions which made traditional fashion editing problematic. The emphasis during the work was to realize the artists' vision to the T, and bring it to life on desktop as well as on mobile.",
-      "stack": ["React"],
-      "client": "Aya Brace",
-      "website": "http://islajournal.com"
-    },
-    {
-      "title": "FDF",
-      "legend": "3D projector",
-      "picture": "/projects/fdf/fdf.png",
-      "expertise": ["Algorithm, 3D Presentation"],
-      "description": "The task was to create a program that takes in an array of xyz-coordinates and projects them to a 3D plane. The project is written entirely in C, so memory management was crucial to ensure zero memory leakage. The starting point is an isometric projection, but the program allows for rotations around all axis.",
-      "stack": ["C"],
-      "client": "School Project"
-    }
-  ]
+    "projects": [
+        {
+            "title": "Containergrid",
+            "legend": "Waste Management and Logistics Software",
+            "picture": "/projects/containergrid/containergrid.png",
+            "expertise": ["Frontend", "Backend", "Mobile"],
+            "description": "Developing a platform to make waste-management logistics easier for the whole value chain. Building new functionality on both the web platform as well as the native mobile app. One of the major responsibilities was to create a fleet-tracking system based on mobile location, and implement a visual dashboard for it in the web app.",
+            "stack": ["Angular", "React Native", "GraphQL", "NodeJS"],
+            "client": "Containergrid GmbH (GER)",
+            "website": "https://containergrid.de"
+        },
+        {
+            "title": "Fondion",
+            "legend": "Construction ERP Software",
+            "picture": "/projects/fondion/fondion.png",
+            "expertise": ["Frontend", "Backend"],
+            "description": "The client is building tailor-made ERP software specifically for companies working in construction and industry. My main focus on the project was to implement new functionality as well to improve existing logic to better cater to the customers. It was a pleasure to work with a highly test driven and strictly typed codebase",
+            "stack": ["React", "Typescript", "Python", "PostgreSQL"],
+            "client": "Fondion Oy",
+            "website": "https://fondion.com"
+        },
+        {
+            "title": "sannasilander",
+            "legend": "Personal Portfolio",
+            "picture": "/projects/sannasilander/collection1.PNG",
+            "expertise": ["Design", "Frontend"],
+            "description": "Personal portfolio for stylist Sanna Silander. The client wanted a simplistic website with a clear focus on the work. Responsiveness was a major concern as most of her potential clients would be browsing on mobile devices.",
+            "stack": ["jQuery", "HTML & css"],
+            "client": "Sanna Silander",
+            "website": "http://sannasilander.com"
+        },
+        {
+            "title": "Beeswax",
+            "legend": "Skill Sharing Web App",
+            "picture": "/projects/beeswax/collection1.png",
+            "expertise": ["Design", "Frontend", "Backend"],
+            "description": "Skill-sharing app created mainly for Hive Helsinki students - to facilitate networking within the school in a fun and natural way. The service utilizes the school's API for profile creation and authentification.",
+            "stack": ["React", "NodeJS"],
+            "client": "Personal Project",
+            "website": "https://beeswax.herokuapp.com"
+        },
+        {
+            "title": "islajournal",
+            "legend": "Issue Two of Fashion Zine",
+            "picture": "/projects/islajournal/islajournal.png",
+            "expertise": ["Frontend"],
+            "description": "Second issue of Fashion Zine ISLA Journal - transformed to a digital format due to Covid-19 restrictions which made traditional fashion editing problematic. The emphasis during the work was to realize the artists' vision to the T, and bring it to life on desktop as well as on mobile.",
+            "stack": ["React"],
+            "client": "Aya Brace",
+            "website": "http://islajournal.com"
+        },
+        {
+            "title": "FDF",
+            "legend": "3D projector",
+            "picture": "/projects/fdf/fdf.png",
+            "expertise": ["Algorithm, 3D Presentation"],
+            "description": "The task was to create a program that takes in an array of xyz-coordinates and projects them to a 3D plane. The project is written entirely in C, so memory management was crucial to ensure zero memory leakage. The starting point is an isometric projection, but the program allows for rotations around all axis.",
+            "stack": ["C"],
+            "client": "School Project"
+        }
+    ]
 }
