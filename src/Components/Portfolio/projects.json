@@ -33,7 +33,7 @@
         {
             "title": "Beeswax",
             "legend": "Skill Sharing Web App",
-            "picture": "/projects/beeswax/collection1.png",
+            "picture": "/projects/beeswax/collection1.PNG",
             "expertise": ["Design", "Frontend", "Backend"],
             "description": "Skill-sharing app created mainly for Hive Helsinki students - to facilitate networking within the school in a fun and natural way. The service utilizes the school's API for profile creation and authentification.",
             "stack": ["React", "NodeJS"],
@@ -43,7 +43,7 @@
         {
             "title": "islajournal",
             "legend": "Issue Two of Fashion Zine",
-            "picture": "/projects/islajournal/islajournal.png",
+            "picture": "/projects/islajournal/islajournal.PNG",
             "expertise": ["Frontend"],
             "description": "Second issue of Fashion Zine ISLA Journal - transformed to a digital format due to Covid-19 restrictions which made traditional fashion editing problematic. The emphasis during the work was to realize the artists' vision to the T, and bring it to life on desktop as well as on mobile.",
             "stack": ["React"],
